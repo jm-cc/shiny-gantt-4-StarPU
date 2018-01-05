@@ -1,2 +1,4 @@
 tasks.rec
 tasks.csv
+*.pyc
+dag.dot
