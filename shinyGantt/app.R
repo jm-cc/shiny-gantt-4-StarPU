@@ -27,7 +27,7 @@ ui <- fluidPage(
 ranges=reactiveValues(x=NULL, y=NULL)
 #Server
 server <- function(input,output) {
-  output$drawGantt <- renderPlot({print_trace(gantt)+coord_cartesian(xlim= ranges$x)})
+  output$drawGantt <- renderPlot({print_trace(gantt)+coord_cartesian(xlim= ranges$x)+theme(legend.position="none")})
 
   output$fullGantt <- renderPlot({print_trace(gantt)})
 
