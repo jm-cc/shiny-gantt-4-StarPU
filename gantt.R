@@ -4,8 +4,13 @@ read_paje_trace <- function(file) {
 }
 
 prepare_trace <- function(df) {
+  #Tasks.rec
   df$DisplayState <- df$Name
   df$ResourceId <- paste(df$MPIRank,sprintf("%02d",df$WorkerId),sep="_")
+
+  #paje2csv trace
+  #df$DisplayState <- df$Value
+
   df
 }
 
