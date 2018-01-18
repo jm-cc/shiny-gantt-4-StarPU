@@ -33,7 +33,7 @@ server <- function(input,output) {
 
   output$task_info <- renderPrint({
     tmp=nearPoints(gantt, input$gantt_click, xvar="StartTime", yvar="RessourceId")
-    tmp[,c("JobId","Name","RessourceId","StartTime","Duration")]
+    tmp[,c("DisplayState","RessourceId","StartTime","Duration")]
   })
 
   observe({
