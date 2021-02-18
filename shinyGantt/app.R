@@ -32,8 +32,8 @@ server <- function(input,output) {
   output$fullGantt <- renderPlot({print_trace(gantt)})
 
   output$task_info <- renderPrint({
-    tmp=nearPoints(gantt, input$gantt_click, xvar="StartTime", yvar="RessourceId")
-    tmp[,c("DisplayState","RessourceId","StartTime","Duration")]
+    tmp=nearPoints(gantt, input$gantt_click, xvar="StartTime", yvar="ResourceId")
+    tmp[,c("DisplayState","ResourceId","StartTime","Duration")]
   })
 
   observe({
